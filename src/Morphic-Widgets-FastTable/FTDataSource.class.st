@@ -73,14 +73,14 @@ FTDataSource >> dropElements: aCollection index: rowIndex [
 
 { #category : 'private' }
 FTDataSource >> elementAt: rowIndex [
-	"I am a really important method for a DataSource. I take an index and I return an object that should be displayed in the table for the index. I am a hook for lazy and paginated sources. Override me in subclasses."
+	"I am a really important method for a DataSource. I take an index and I return an object that should be displayed in the table for the index. I am an important hook for lazy and paginated sources. Override me in subclasses."
 
 	self subclassResponsibility
 ]
 
 { #category : 'testing' }
 FTDataSource >> hasElementAt: index [
-	"I take an index and return true if I have an element at that index. I am a hook for lazy and paginated sources."
+	"I take an index and return true if I have an element at that index. I am an important hook for lazy and paginated sources."
 
 	^ self numberOfRows >= index
 ]
